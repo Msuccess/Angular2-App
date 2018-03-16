@@ -1,9 +1,12 @@
 import {Component} from 'angular2/core';
+import { CoursesComponent } from './courses.componet';
 
 
 
 @Component({
     selector: 'my-app',
-    template: '<h1>Hello Angular</h1>'
+    template: '<h1>Hello Angular</h1><courses></courses>'
+
+    directives: [CoursesComponent]
 })
 export class AppComponent { }
