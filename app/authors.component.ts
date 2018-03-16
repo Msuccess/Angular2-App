@@ -1,11 +1,14 @@
+import { AuthoGrowDirectives } from './auto-grow.directive';
 import { AuthorServices } from './author.services';
-import { Component } from 'angular2/core';
+import { Component, Directive } from 'angular2/core';
 
 @Component({
     selector: 'authors',
     template:`
     <H2>{{Title}}</H2>
     <div>
+
+    <input type="text" autoGrow />
     <ul>
     <li *ngFor="#author of authors">
     {{author}}
@@ -15,6 +18,7 @@ import { Component } from 'angular2/core';
     </div>
     `,
     providers : [AuthorServices]
+    directives :[AuthoGrowDirectives]
 })
 
 export class AuthorsComponent {
