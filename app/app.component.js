@@ -1,4 +1,4 @@
-System.register(['angular2/core', './courses.componet'], function(exports_1, context_1) {
+System.register(['angular2/core', './courses.componet', './authors.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './courses.componet'], function(exports_1, con
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, courses_componet_1;
+    var core_1, courses_componet_1, authors_component_1;
     var AppComponent;
     return {
         setters:[
@@ -19,6 +19,9 @@ System.register(['angular2/core', './courses.componet'], function(exports_1, con
             },
             function (courses_componet_1_1) {
                 courses_componet_1 = courses_componet_1_1;
+            },
+            function (authors_component_1_1) {
+                authors_component_1 = authors_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -27,8 +30,8 @@ System.register(['angular2/core', './courses.componet'], function(exports_1, con
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: '<h1>Hello Angular</h1><courses></courses>',
-                        directives: [courses_componet_1.CoursesComponent]
+                        template: "<h1>Hello Angular</h1>\n    <courses></courses>\n    <authors></authors>\n    ",
+                        directives: [courses_componet_1.CoursesComponent, authors_component_1.AuthorsComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
